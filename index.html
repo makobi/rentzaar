@@ -1,0 +1,354 @@
+<html>
+<head>
+	<title> CCOM Forms </title>
+
+	<style type="text/css">
+		
+		body{
+
+			background-color: gray;
+			padding:0px;
+			margin: 0px;
+			width: 100%;
+		}
+
+		#TopBar{
+
+			height: 50px;
+			background-color: rgb(63,88,252);
+			-moz-box-shadow: 0 3px 14px 0 #000;
+			-webkit-box-shadow: 0 3px 14px 0 #000;
+			box-shadow: 0 3px 14px 0 #000;
+
+
+		}
+					
+
+		label{
+
+			width: 0px;
+		}
+
+		#tabla th{
+
+		    text-align: left;
+		    width: 31px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		}
+
+		#tabla label{
+
+    		font-size: 32;
+    		opacity:.7;
+		}
+
+		#tabla td{
+
+		    width: 75%;
+		    height: 35px;
+		    padding-top: 5px;
+		    padding-bottom: 5px;
+		}
+
+		#tabla input{
+
+			width: 95%;
+			height: 35px;
+			font-size: 20;
+		}
+
+		#title{
+
+			letter-spacing: -6px;
+			text-transform: lowercase;
+			font-size: 100px;
+			text-align: center;
+			padding-bottom: 0px;
+			margin-bottom: 8px;
+			margin-top: 20px;
+			font-family: 'Oxygen', sans-serif;
+			font-weight: 300;
+		}
+
+		#slogan{
+
+			margin-top: -20px;
+			padding: 0px 0px 0px 5px;
+			font-size: 20px;
+			font-weight: 300;
+			color: rgb(40, 19, 87);
+			text-align: center;
+			margin-bottom: 45px;
+		}
+
+		#submit{
+
+			float: right;
+			margin-right: 15px;
+			margin-top: 30px;
+			width: 100px;
+		}
+
+		#register{
+
+			float: right;
+			margin-top: 30px;
+			width: 100px;
+		}
+
+		#login_wrapp{
+
+			display: -webkit-box; 
+			display: -moz-box; display: box;
+ 
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			-ms-box-orient: vertical;
+			box-orient: vertical;
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			-ms-box-align: center;
+			box-align: center;
+		}
+
+		#login_sub_wrapp{
+
+			width: 800px; 
+			height: 300px; 
+			background-color: white; 
+			border-radius: 20px;
+		    -moz-box-shadow: 0 12px 14px 1px #000; 
+		    -webkit-box-shadow: 0 12px 14px 1px #000; 
+		    box-shadow: 0 12px 14px 1px #000;
+
+		    display: -webkit-box; 
+		    display: -moz-box; display: box;
+ 
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			-ms-box-orient: vertical;
+			box-orient: vertical;
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			-ms-box-align: center;
+			box-align: center;
+		}
+
+		#nav{
+			width: 100%;
+			height: 50px;
+			z-index: 500;
+		}
+
+		#nav li {
+		    margin:5px;
+		    margin-bottom: 0px;
+		    float:left;
+		    position:relative;
+		    list-style:none;
+		}
+
+		#nav a{
+
+			text-decoration:none;
+
+		    display:block;
+
+		    padding:0px 10px;
+		    font-size: 20px;
+		    color: white;
+		    opacity: .8;
+		}
+
+		#nav li a:hover{
+
+			opacity: 1;
+
+		}
+
+		#nav li:hover > ul {
+		    opacity:1;
+		    visibility:visible;
+		}
+		#nav ul {
+		    opacity:0;
+		    visibility:hidden;
+		    padding:0;
+		    width:175px;
+		    position:absolute;
+		    margin: 0px;
+		    padding: 0px;
+		    padding-top: 15px;
+		}
+
+		#nav ul li {
+		    float:none;
+		    margin:0;
+		}
+
+		#new_t02{
+
+			background-color: rgb(63,88,252);
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border-left: 2px solid white;
+			border-right: 2px solid white;
+			border-top: 2px solid white;
+		}
+
+		#new_A125{
+
+			background-color: rgb(63,88,252);
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			border-left: 2px solid white;
+			border-right: 2px solid white;
+			border-bottom: 2px solid white;
+		}
+
+		#main_wrapper{
+
+			width: 90%;
+			background-color: white;
+			height: 400px;
+			margin: 0px auto;
+			border-radius: 15px;
+			-moz-box-shadow: 0 12px 14px 1px #000; 
+		    -webkit-box-shadow: 0 12px 14px 1px #000; 
+		    box-shadow: 0 12px 14px 1px #000;
+		    padding-top: 35px;
+		}
+
+		#sub_wrapper{
+
+			width: 100%;
+			height: 350px;
+			margin: 0px auto;
+
+		}
+
+		article{
+			margin-top: 1%;
+
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			box-flex:1;
+			-ms-box-flex:1;
+			border:1px solid black;
+
+		    margin-left: 10px;
+		    margin-right: 10px;
+		    border-radius: 5px;
+		    background-color: grey;
+
+		}
+
+		article header{
+
+    		margin-top: 10px;
+    		color: white;
+    		font-size: 20px;
+
+		}
+
+		article footer{
+
+			margin-bottom: 10px;
+		}
+
+		.media{
+
+			width:170px;
+			height:140px;
+			border: 1px solid #4C6F2F;;
+			margin:5px;
+			-webkit-box-shadow: 0px 0px 1px 1px black;
+			-moz-box-shadow: 0px 0px 1px 1px black;
+			box-shadow: 0px 0px 1px 1px black;
+		}
+
+		#media img{
+			width: 172px;
+			height: 142px;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+
+	<h1 id="title" >Rentzaar</h1>
+	<p id="slogan" >It's one to one!</p>
+	<div id="main_wrapper">
+		<div id="sub_wrapper">
+			<table style="width:100%; height:350px;">
+				<tr>
+					<td>
+						<article > <!--Starts Feature-Frame 1 -->
+							<center>
+								<header>
+									Item 1
+								</header>
+								<div class="media">
+									<img src="item4.jpeg" width="172" height="142">
+								</div>
+								<footer>
+									<a href="projects.html"> Rent</a>
+								</footer>
+							</center>
+						</article> <!--Ends Feature-Frame 1 -->
+					</td>
+					<td>
+						<article > <!--Starts Feature-Frame 1 -->
+							<center>
+								<header>
+									Item 2
+								</header>
+								<div class="media">
+									<img src="item3.jpeg" width="172" height="142">
+								</div>
+								<footer>
+									<a href="projects.html"> Rent</a>
+								</footer>
+							</center>
+						</article> <!--Ends Feature-Frame 1 -->
+					</td>
+					<td>
+						<article > <!--Starts Feature-Frame 1 -->
+							<center>
+								<header>
+									Item 3
+								</header>
+								<div class="media">
+									<img src="item1.jpg" width="172" height="142">
+								</div>
+								<footer>
+									<a href="projects.html"> Rent</a>
+								</footer>
+							</center>
+						</article> <!--Ends Feature-Frame 1 -->
+					</td>
+					<td>
+						<article > <!--Starts Feature-Frame 1 -->
+							<center>
+								<header>
+									Item 4
+								</header>
+								<div class="media">
+									<img src="item2.jpg" width="172" height="142">
+								</div>
+								<footer>
+									<a href="projects.html"> Rent</a>
+								</footer>
+							</center>
+						</article> <!--Ends Feature-Frame 1 -->
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
